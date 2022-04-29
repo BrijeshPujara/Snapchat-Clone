@@ -14,11 +14,13 @@ import { v4 as uuid } from 'uuid';
 import { db, storage } from "../firebase";
 import firebase from 'firebase/compat/app';
 import "./Preview.css";
+import {selectUser} from '../features/appSlice'
 
 const Preview = () => {
   const image = useSelector(selectCameraImage);
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const user = useSelector(selectUser);
 
   useEffect(() => {
     if (!image) {
@@ -48,8 +50,9 @@ const Preview = () => {
           .then((url) => {
             db.collection("posts").add({
               imageUrl: url,
-              username: "",
+              username: user.username,
               read: false,
+              profilePic: user.profilePic,
               timestamp: firebase.firestore.FieldValue.serverTimestamp(),
             });
             navigate("/chats");
