@@ -37,25 +37,27 @@ function App() {
           <Login />
         ) : (
           <>
-            <img className="app-logo"
+            <img
+              className="app-logo"
               src="https://images.ctfassets.net/adclj4ijug4e/5LO0pW3N2SNIQTN3DPr9zZ/ef2d3f804ec3719a3ac0d43ab3732546/social-lg.jpeg"
               alt=""
             />
-              <div className="app-body">
-                <div className="app-bodyBackground"></div>
-              <Routes>
-                <Route path="/chats/view" element={<ChatView />} />
-              </Routes>
+            <div className="app-body">
+              <div className="app-bodyBackground">
+                <Routes>
+                  <Route path="/chats/view" element={<ChatView />} />
+                </Routes>
 
-              <Routes>
-                <Route path="/chats" element={<Chats />} />
-              </Routes>
-              <Routes>
-                <Route path="/preview" element={<Preview />} />
-              </Routes>
-              <Routes>
-                <Route path="/" element={<WebcamCapture />} />
-              </Routes>
+                <Routes>
+                  <Route path="/chats" element={<Chats />} />
+                </Routes>
+                <Routes>
+                  <Route path="/preview" element={<Preview />} />
+                </Routes>
+                <Routes>
+                  <Route path="/" element={<WebcamCapture />} />
+                </Routes>
+              </div>
             </div>
           </>
         )}
