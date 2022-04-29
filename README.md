@@ -13,7 +13,7 @@ Firebase Hosting - https://snapchat-clone-dad9e.web.app/
 
 ```
 # Clone this repository
-$ git clone https://github.com/BrijeshPujara/snapchat_clone.git
+$ git clone https://github.com/BrijeshPujara/Snapchat-Clone.git
 
 # Go into the repository
 $ cd snapchat_clone
